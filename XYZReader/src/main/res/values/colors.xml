@@ -22,4 +22,8 @@
     <color name="theme_primary_dark">#04561A</color>
     <color name="theme_accent">#04561A</color>
     <color name="ltgray">#ffe0e0e0</color>
+    <color name="date_and_author_text">#8fff</color>
+    <color name="article_title_text">#fff</color>
+    <color name="article_title_background">#333</color>
+    <color name="dark_gray">FF646363</color>
 </resources>
