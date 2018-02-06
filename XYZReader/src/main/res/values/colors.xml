@@ -25,5 +25,5 @@
     <color name="date_and_author_text">#8fff</color>
     <color name="article_title_text">#fff</color>
     <color name="article_title_background">#333</color>
-    <color name="dark_gray">FF646363</color>
+    <color name="dark_gray_text">#767474</color>
 </resources>
