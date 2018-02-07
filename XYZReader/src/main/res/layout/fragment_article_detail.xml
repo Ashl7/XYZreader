@@ -22,8 +22,9 @@
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
                     android:id="@+id/photo"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="112dp"
+                    android:scaleType="centerCrop"
                      />
                 <View
                     android:layout_width="match_parent"
@@ -32,6 +33,7 @@
             </FrameLayout>
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
+                android:layout_below="@+id/photo_container"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
