@@ -42,7 +42,7 @@
                 <LinearLayout
                     android:id="@+id/meta_bar"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="@dimen/detail_appbar_height"
                     android:background="@color/article_title_background"
                     android:layout_gravity="bottom"
                     android:orientation="vertical"
