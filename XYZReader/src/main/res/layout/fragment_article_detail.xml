@@ -17,43 +17,23 @@
             <FrameLayout
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/photo_placeholder">
+                android:layout_height="wrap_content">
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
-                    android:scaleType="centerCrop"
-                     />
+                    android:layout_height="@dimen/detail_image_height"
+                    android:scaleType="centerCrop" />
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
+                    android:layout_height="@dimen/detail_image_height"
                     android:background="@drawable/photo_background_protection" />
-            </FrameLayout>
-
-            <com.example.xyzreader.ui.MaxWidthLinearLayout
-                android:layout_below="@+id/photo_container"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:maxWidth="@dimen/detail_card_max_width"
-                android:background="#fff">
-
                 <LinearLayout
-                    android:id="@+id/meta_bar"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/detail_appbar_height"
-                    android:background="@color/article_title_background"
-                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingLeft="@dimen/detail_inner_horiz_margin"
-                    android:paddingRight="@dimen/detail_inner_horiz_margin"
-                    android:paddingTop="@dimen/detail_metabar_vert_padding"
-                    android:paddingBottom="@dimen/detail_metabar_vert_padding"
-                    android:layout_marginBottom="@dimen/detail_metabar_vert_padding">
-
+                    android:layout_gravity="bottom"
+                    android:paddingBottom="@dimen/detail_text_padding_bottom">
                     <TextView
                         android:id="@+id/article_title"
                         style="?android:attr/textAppearanceLarge"
@@ -67,16 +47,27 @@
                         android:lineSpacingMultiplier="0.9"
                         android:gravity="center"
                         tools:text="Article Name"/>
-
                     <TextView
                         android:id="@+id/article_byline"
                         style="?android:attr/textAppearanceSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/date_and_author_text"
+                        android:paddingStart="16dp"
                         android:gravity="center"
                         tools:text="author and date"/>
                 </LinearLayout>
+
+            </FrameLayout>
+
+            <com.example.xyzreader.ui.MaxWidthLinearLayout
+                android:layout_below="@+id/photo_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:maxWidth="@dimen/detail_card_max_width"
+                android:background="#fff">
 
                 <TextView
                     android:id="@+id/article_body"
