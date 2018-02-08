@@ -10,5 +10,6 @@
 
     <dimen name="detail_image_height">300dp</dimen>
     <dimen name="detail_text_padding_bottom">16dp</dimen>
+    <dimen name="detail_content_padding_top">24dp</dimen>
 
 </resources>

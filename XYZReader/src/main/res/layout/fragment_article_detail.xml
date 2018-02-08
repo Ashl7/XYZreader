@@ -57,18 +57,17 @@
                         android:gravity="center"
                         tools:text="author and date"/>
                 </LinearLayout>
-
             </FrameLayout>
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
-                android:layout_below="@+id/photo_container"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:maxWidth="@dimen/detail_card_max_width"
+                android:layout_below="@+id/photo_container"
+                android:paddingTop="@dimen/detail_content_padding_top"
                 android:background="#fff">
-
                 <TextView
                     android:id="@+id/article_body"
                     style="?android:attr/textAppearanceMedium"
@@ -81,8 +80,7 @@
                     android:textColorLink="@color/theme_accent"
                     android:textSize="@dimen/detail_body_text_size"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
-                    tools:text="context context context"/>
-
+                    tools:text="content content content" />
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
 
         </RelativeLayout>
@@ -99,6 +97,6 @@
         app:pressedTranslationZ="@dimen/fab_press_translation_z"
         android:layout_gravity="bottom|end"
         android:src="@drawable/ic_share"
-        android:contentDescription="@string/action_share"/>
+        android:contentDescription="@string/action_share" />
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
