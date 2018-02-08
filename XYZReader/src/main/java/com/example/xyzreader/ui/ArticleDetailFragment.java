@@ -205,8 +205,9 @@ public class ArticleDetailFragment extends Fragment implements
         bylineView.setMovementMethod(new LinkMovementMethod());
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
 
-
-        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
+        titleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "GreatVibes-Regular.ttf"));
+        bylineView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Satisfy-Regular.ttf"));
+        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "SourceSerifPro-Regular.ttf"));
 
         if (mCursor != null) {
             mRootView.setAlpha(0);
