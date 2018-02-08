@@ -40,7 +40,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                        android:fontFamily="sans-serif-condensed"
                         android:textColor="@color/article_title_text"
                         android:textStyle="bold"
                         android:textSize="@dimen/detail_title_text_size"
@@ -60,6 +59,7 @@
             </FrameLayout>
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
+                android:id="@+id/article_holder"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:layout_below="@+id/photo_container"
                 android:paddingTop="@dimen/detail_content_padding_top"
-                android:background="#fff">
+                android:background="#ffffffff">
                 <TextView
                     android:id="@+id/article_body"
                     style="?android:attr/textAppearanceMedium"

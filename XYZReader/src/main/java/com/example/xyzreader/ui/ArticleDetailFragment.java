@@ -204,6 +204,8 @@ public class ArticleDetailFragment extends Fragment implements
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
         bylineView.setMovementMethod(new LinkMovementMethod());
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
+        final MaxWidthLinearLayout maxWidthLinearLayout = (MaxWidthLinearLayout) mRootView.findViewById(R.id.article_holder);
+
 
         titleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "GreatVibes-Regular.ttf"));
         bylineView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Satisfy-Regular.ttf"));
@@ -245,6 +247,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
                                 //mRootView.findViewById(R.id.meta_bar).setBackgroundColor(mMutedColor);
                                 updateStatusBar();
+                                //maxWidthLinearLayout.setBackgroundColor(p.getLightMutedColor(0xFFFFFFFF));
                             }
                         }
 
