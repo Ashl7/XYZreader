@@ -9,4 +9,6 @@
 
     <string name="up">Up</string>
 
+    <string name="transition_from_list_to_detail">sharedElementTransition</string>
+
 </resources>
