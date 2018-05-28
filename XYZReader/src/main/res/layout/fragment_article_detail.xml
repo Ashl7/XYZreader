@@ -23,7 +23,8 @@
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/detail_image_height"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:transitionName="transition_from_list_to_detail"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/detail_image_height"
@@ -77,6 +78,8 @@
                     android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
                     android:textColor="@color/dark_gray_text"
+                    android:ellipsize="end"
+                    android:maxLines="30"
                     android:textColorLink="@color/theme_accent"
                     android:textSize="@dimen/detail_body_text_size"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
