@@ -2,6 +2,7 @@ package com.example.xyzreader.ui;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
@@ -27,6 +28,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -159,8 +161,10 @@ public class ArticleDetailFragment extends Fragment implements
 
         bindViews();
         updateStatusBar();
+        scheduleStartPostponedTransition(mPhotoView);
         return mRootView;
     }
+
 
     private void updateStatusBar() {
         int color = 0;
@@ -313,5 +317,24 @@ public class ArticleDetailFragment extends Fragment implements
         return mIsCard
                 ? (int) mPhotoContainerView.getTranslationY() + mPhotoView.getHeight() - mScrollY
                 : mPhotoView.getHeight() - mScrollY;
+    }
+
+    /**
+     * Schedules the shared element transition to be started immediately
+     * after the shared element has been measured and laid out within the
+     * activity's view hierarchy.
+     **/
+    public void scheduleStartPostponedTransition(final View sharedElement) {
+        sharedElement.getViewTreeObserver().addOnPreDrawListener(
+                new ViewTreeObserver.OnPreDrawListener() {
+                    @Override
+                    public boolean onPreDraw() {
+                        sharedElement.getViewTreeObserver().removeOnPreDrawListener(this);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            getActivity().startPostponedEnterTransition();
+                        }
+                        return true;
+                    }
+                });
     }
 }

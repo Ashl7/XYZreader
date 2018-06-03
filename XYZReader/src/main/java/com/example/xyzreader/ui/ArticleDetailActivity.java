@@ -14,6 +14,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.WindowInsets;
 
 import com.example.xyzreader.R;
@@ -46,7 +47,11 @@ public class ArticleDetailActivity extends ActionBarActivity
             getWindow().getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
                             View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+
+            // Postpone the shared element enter transition.
+            postponeEnterTransition();
         }
+
         setContentView(R.layout.activity_article_detail);
 
         getLoaderManager().initLoader(0, null, this);
