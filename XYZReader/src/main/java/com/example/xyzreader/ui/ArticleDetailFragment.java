@@ -161,7 +161,6 @@ public class ArticleDetailFragment extends Fragment implements
 
         bindViews();
         updateStatusBar();
-        scheduleStartPostponedTransition(mPhotoView);
         return mRootView;
     }
 
@@ -237,7 +236,6 @@ public class ArticleDetailFragment extends Fragment implements
                                 + " by <font color='#ffffff'>"
                                 + mCursor.getString(ArticleLoader.Query.AUTHOR)
                                 + "</font>"));
-
             } else {
                 // If date is before 1902, just show the string
                 bylineView.setText(Html.fromHtml(
@@ -270,6 +268,9 @@ public class ArticleDetailFragment extends Fragment implements
 
                         }
                     });
+
+            scheduleStartPostponedTransition(mPhotoView);
+            
         } else {
             mRootView.setVisibility(View.GONE);
             titleView.setText("N/A");
