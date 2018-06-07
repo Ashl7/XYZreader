@@ -249,7 +249,7 @@ public class ArticleDetailFragment extends Fragment implements
                     });
 
             scheduleStartPostponedTransition(mPhotoView);
-            
+
         } else {
             mRootView.setVisibility(View.GONE);
             titleView.setText("N/A");
