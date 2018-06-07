@@ -199,7 +199,7 @@ public class ArticleDetailFragment extends Fragment implements
         final MaxWidthLinearLayout maxWidthLinearLayout = (MaxWidthLinearLayout) mRootView.findViewById(R.id.article_holder);
 
 
-        titleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "GreatVibes-Regular.ttf"));
+        titleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "IMFeFCsc28P.ttf"));
         bylineView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Satisfy-Regular.ttf"));
         bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "SourceSerifPro-Regular.ttf"));
 
