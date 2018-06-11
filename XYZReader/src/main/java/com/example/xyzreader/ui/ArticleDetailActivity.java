@@ -111,7 +111,6 @@ public class ArticleDetailActivity extends ActionBarActivity
             if (getIntent() != null && getIntent().getData() != null) {
                 mStartId = ItemsContract.Items.getItemId(getIntent().getData());
                 mSelectedItemId = mStartId;
-                mTransitionName = getIntent().getStringExtra(ArticleDetailFragment.ARG_TRANSITION_NAME);
             }
         }
     }
