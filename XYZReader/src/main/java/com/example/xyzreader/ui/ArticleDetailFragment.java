@@ -52,7 +52,7 @@ public class ArticleDetailFragment extends Fragment implements
 
     private Cursor mCursor;
     private long mItemId;
-    private String mTransitionName;
+    private int mPosition;
     private View mRootView;
     private int mMutedColor = 0xFF333333;
     private ObservableScrollView mScrollView;
@@ -79,10 +79,10 @@ public class ArticleDetailFragment extends Fragment implements
     public ArticleDetailFragment() {
     }
 
-    public static ArticleDetailFragment newInstance(long itemId, String transitionName) {
+    public static ArticleDetailFragment newInstance(long itemId, int position) {
         Bundle arguments = new Bundle();
         arguments.putLong(ARG_ITEM_ID, itemId);
-        arguments.putString(ARG_TRANSITION_NAME, transitionName);
+        arguments.putInt(ARG_TRANSITION_NAME, position);
         ArticleDetailFragment fragment = new ArticleDetailFragment();
         fragment.setArguments(arguments);
         return fragment;
@@ -96,7 +96,7 @@ public class ArticleDetailFragment extends Fragment implements
             mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
         if (getArguments().containsKey(ARG_TRANSITION_NAME)) {
-            mTransitionName = getArguments().getString(ARG_TRANSITION_NAME);
+            mPosition = getArguments().getInt(ARG_TRANSITION_NAME);
         }
 
         mIsCard = getResources().getBoolean(R.bool.detail_is_card);
@@ -237,7 +237,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ) {
-                                    mPhotoView.setTransitionName(mTransitionName);
+                                    mPhotoView.setTransitionName(getString(R.string.transition_from_list_to_detail) + mPosition);
                                 }
                             }
                         }
