@@ -1,3 +1,11 @@
-= XYZ Reader Starter Code
+This project involves redesigning an app to follow the Material Design guidelines and translate a set of static design mocks to a living and breathing app. The started code is provided by Udacity. XYZ reader is a mock RSS feed reader. I used material design principles to make the app feel... beautiful!!
 
-This repository stores the starter code for the XYZ Reader project in Udacity's Android Nanodegree.
+## Libraries
+* [Lottie](http://airbnb.io/lottie/)
+
+## UI Component
+* [CollapsingToolBar](https://developer.android.com/reference/android/support/design/widget/CollapsingToolbarLayout.html)
+* [CoordinatorLayout](https://developer.android.com/reference/android/support/design/widget/CoordinatorLayout.html)
+* [SharedElementTransition](https://android-developers.googleblog.com/2018/02/continuous-shared-element-transitions.html)
+* [Custom Font]
+
