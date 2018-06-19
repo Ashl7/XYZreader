@@ -2,10 +2,11 @@ This project involves redesigning an app to follow the Material Design guideline
 
 ## Libraries
 * [Lottie](http://airbnb.io/lottie/)
+* [Timber](https://github.com/JakeWharton/timber)
 
 ## UI Component
 * [CollapsingToolBar](https://developer.android.com/reference/android/support/design/widget/CollapsingToolbarLayout.html)
 * [CoordinatorLayout](https://developer.android.com/reference/android/support/design/widget/CoordinatorLayout.html)
 * [SharedElementTransition](https://android-developers.googleblog.com/2018/02/continuous-shared-element-transitions.html)
-* [Custom Font]
+* Custom Font
 
