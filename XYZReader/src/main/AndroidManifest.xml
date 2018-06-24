@@ -15,7 +15,8 @@
         android:theme="@style/Theme.Bacon">
 
         <activity
-            android:name=".ui.SplashScreenAnimationActivity">
+            android:name=".ui.SplashScreenAnimationActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
