@@ -68,6 +68,8 @@ public class ArticleListActivity extends AppCompatActivity implements
         if (savedInstanceState == null) {
             refresh();
         }
+
+        overridePendingTransition(R.anim.slide_animation_enter, R.anim.slide_animation_exit);
     }
 
     private void refresh() {
